@@ -111,7 +111,8 @@ Xnl=[0.39, 	0.42, 	0.43, 	0.44]
 F=[10, 	20, 	30, 	40,50, 	60 ,	70 ,	80 ]
 X=[0.10,  	0.17, 	0.27, 	0.35, 0.39, 	0.42, 	0.43, 	0.44]
 k,b=regresion_lineal(Fl, Xl)
-print("a) La parte lineal muestra una constante de resorte de " +str(k))
+k2,b2=regresion_lineal(Xl, Fl)
+print("a) La parte lineal muestra una constante de resorte de " +str(k2))
 print("b) La funciòn en el punto dado vale: "+str(parteB(Fnl,Xnl)));
 
 plt.plot(F,X,'bo',F,[f(i,k,b,Fnl,Xnl) for i in F] , 'g-')
